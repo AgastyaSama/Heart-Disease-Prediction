@@ -1,4 +1,3 @@
-````markdown
 # Heart Disease Prediction using Machine Learning
 
 <p align="center">
@@ -165,4 +164,4 @@ The Random Forest Classifier provides reliable predictions on the given dataset 
 Agastya Verma
 
 GitHub: https://github.com/AgastyaSama
-````
+
