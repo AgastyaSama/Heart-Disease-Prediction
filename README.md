@@ -1,422 +1,168 @@
-# ````markdown
+````markdown
+# Heart Disease Prediction using Machine Learning
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Scikit--Learn-Random%20Forest-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+</p>
 
-# \# ❤️ Heart Disease Prediction using Machine Learning
+---
 
-# 
+## Problem Statement
 
-# <p align="center">
+Heart disease is one of the leading causes of death worldwide. Early prediction can help identify high-risk patients and support timely medical intervention.
 
-# &#x20; <img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge\&logo=python\&logoColor=white">
+The objective of this project is to build a Machine Learning model that predicts whether a patient is likely to have heart disease based on medical attributes. The project demonstrates a complete machine learning workflow, from data preprocessing to model evaluation.
 
-# &#x20; <img src="https://img.shields.io/badge/Scikit--Learn-Random%20Forest-F7931E?style=for-the-badge\&logo=scikitlearn\&logoColor=white">
+---
 
-# &#x20; <img src="https://img.shields.io/badge/Machine%20Learning-Classification-success?style=for-the-badge">
+## Dataset
 
-# &#x20; <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge">
+This project uses the **Heart Failure Prediction Dataset**.
 
-# </p>
+| Property | Value |
+|----------|-------|
+| Dataset | Heart Failure Prediction Dataset |
+| Records | 918 |
+| Features | 11 |
+| Target Variable | HeartDisease |
+| Problem Type | Binary Classification |
 
-# 
+The dataset contains patient information such as age, sex, chest pain type, blood pressure, cholesterol level, ECG results, maximum heart rate, exercise-induced angina, ST slope, and other clinical measurements.
 
-# <p align="center">
+---
 
-# &#x20; Predicting Heart Disease using Machine Learning with Python and Scikit-Learn.
+## Technologies Used
 
-# </p>
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- Joblib
+- Jupyter Notebook
+
+---
+
+## Methodology
+
+The project follows the standard machine learning pipeline:
+
+```text
+Dataset
+   │
+   ▼
+Data Cleaning
+   │
+   ▼
+Exploratory Data Analysis
+   │
+   ▼
+Feature Engineering
+   │
+   ▼
+Data Preprocessing
+   │
+   ▼
+Train-Test Split
+   │
+   ▼
+Random Forest Classifier
+   │
+   ▼
+Model Evaluation
+   │
+   ▼
+Model Saving
+```
 
-# 
+The preprocessing pipeline includes:
 
-# \---
+- Handling invalid cholesterol values
+- Standardization of numerical features
+- One-Hot Encoding of categorical features
+- Training using Random Forest Classifier
 
-# 
+---
 
-# \# 📌 Overview
+## Results
 
-# 
+The trained model successfully predicts the presence of heart disease using patient medical data.
 
-# This project uses a \*\*Random Forest Classifier\*\* to predict whether a patient is likely to have \*\*Heart Disease\*\* based on clinical and medical attributes.
+The project generates the following outputs:
 
-# 
+- Heart Disease Distribution
+- Correlation Heatmap
+- Feature Importance
+- Confusion Matrix
+- Trained Machine Learning Model
 
-# The project demonstrates a complete Machine Learning workflow including:
+### Heart Disease Distribution
 
-# 
+<p align="center">
+<img src="results/heart_disease_distribution.png" width="700">
+</p>
 
-# \- Data Cleaning
+### Correlation Heatmap
 
-# \- Exploratory Data Analysis (EDA)
+<p align="center">
+<img src="results/correlation_heatmap.png" width="700">
+</p>
 
-# \- Data Preprocessing
+### Feature Importance
 
-# \- Feature Engineering
+<p align="center">
+<img src="results/feature_importance.png" width="700">
+</p>
 
-# \- Model Training
+### Confusion Matrix
 
-# \- Model Evaluation
+<p align="center">
+<img src="results/confusion_matrix.png" width="600">
+</p>
 
-# \- Feature Importance Analysis
+---
 
-# \- Model Serialization
+## Project Structure
 
-# 
+```text
+Heart-Disease-Prediction/
+│
+├── data/
+│   └── heart.csv
+│
+├── model/
+│   └── random_forest_model.pkl
+│
+├── notebook/
+│   └── heart_disease_analysis.ipynb
+│
+├── results/
+│   ├── heart_disease_distribution.png
+│   ├── correlation_heatmap.png
+│   ├── feature_importance.png
+│   └── confusion_matrix.png
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-# \---
+---
 
-# 
+## Conclusion
 
-# \# 📊 Dataset
+This project demonstrates the complete implementation of a machine learning model for heart disease prediction. It includes data preprocessing, exploratory data analysis, feature engineering, model training, evaluation, and model serialization.
 
-# 
+The Random Forest Classifier provides reliable predictions on the given dataset and demonstrates how machine learning techniques can be applied to healthcare prediction problems.
 
-# | Property | Value |
+---
 
-# |----------|-------|
+## Author
 
-# | Dataset | Heart Failure Prediction Dataset |
+Agastya Verma
 
-# | Total Records | 918 |
-
-# | Features | 11 |
-
-# | Target | HeartDisease |
-
-# | Problem Type | Binary Classification |
-
-# 
-
-# \---
-
-# 
-
-# \# 🛠 Tech Stack
-
-# 
-
-# | Category | Technologies |
-
-# |----------|--------------|
-
-# | Language | Python |
-
-# | Data Analysis | Pandas, NumPy |
-
-# | Visualization | Matplotlib, Seaborn |
-
-# | Machine Learning | Scikit-Learn |
-
-# | Model Saving | Joblib |
-
-# | Development | Jupyter Notebook |
-
-# 
-
-# \---
-
-# 
-
-# \# 🔄 Machine Learning Pipeline
-
-# 
-
-# ```text
-
-# Dataset
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Data Cleaning
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Exploratory Data Analysis
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Feature Engineering
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Preprocessing
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Train / Test Split
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Random Forest Classifier
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Model Evaluation
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Feature Importance
-
-# &#x20;  │
-
-# &#x20;  ▼
-
-# Saved Model (.pkl)
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 📈 Visualizations
-
-# 
-
-# \## Heart Disease Distribution
-
-# 
-
-# <p align="center">
-
-# <img src="results/heart\_disease\_distribution.png" width="700">
-
-# </p>
-
-# 
-
-# \---
-
-# 
-
-# \## Correlation Heatmap
-
-# 
-
-# <p align="center">
-
-# <img src="results/correlation\_heatmap.png" width="700">
-
-# </p>
-
-# 
-
-# \---
-
-# 
-
-# \## Feature Importance
-
-# 
-
-# <p align="center">
-
-# <img src="results/feature\_importance.png" width="700">
-
-# </p>
-
-# 
-
-# \---
-
-# 
-
-# \## Confusion Matrix
-
-# 
-
-# <p align="center">
-
-# <img src="results/confusion\_matrix.png" width="600">
-
-# </p>
-
-# 
-
-# \---
-
-# 
-
-# \# 🤖 Model Information
-
-# 
-
-# | Model | Random Forest Classifier |
-
-# |------|---------------------------|
-
-# | Preprocessing | StandardScaler + OneHotEncoder |
-
-# | Framework | Scikit-Learn Pipeline |
-
-# | Output | Binary Classification |
-
-# 
-
-# \---
-
-# 
-
-# \# 📂 Project Structure
-
-# 
-
-# ```text
-
-# Heart-Disease-Prediction
-
-# │
-
-# ├── data/
-
-# │   └── heart.csv
-
-# │
-
-# ├── model/
-
-# │   └── random\_forest\_model.pkl
-
-# │
-
-# ├── notebook/
-
-# │   └── heart\_disease\_analysis.ipynb
-
-# │
-
-# ├── results/
-
-# │   ├── heart\_disease\_distribution.png
-
-# │   ├── correlation\_heatmap.png
-
-# │   ├── feature\_importance.png
-
-# │   └── confusion\_matrix.png
-
-# │
-
-# ├── requirements.txt
-
-# ├── README.md
-
-# └── .gitignore
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 🚀 Getting Started
-
-# 
-
-# Clone the repository:
-
-# 
-
-# ```bash
-
-# git clone https://github.com/AgastyaSama/Heart-Disease-Prediction.git
-
-# ```
-
-# 
-
-# Install dependencies:
-
-# 
-
-# ```bash
-
-# pip install -r requirements.txt
-
-# ```
-
-# 
-
-# Open the notebook:
-
-# 
-
-# ```bash
-
-# jupyter notebook
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \# 📌 Future Improvements
-
-# 
-
-# \- Hyperparameter Tuning
-
-# \- Compare Multiple ML Models
-
-# \- Web Application using Streamlit
-
-# \- Cloud Deployment
-
-# \- Real-Time Prediction Interface
-
-# 
-
-# \---
-
-# 
-
-# \# 👨‍💻 Author
-
-# 
-
-# \*\*Agastya Verma\*\*
-
-# 
-
-# GitHub: \*\*https://github.com/AgastyaSama\*\*
-
-# 
-
-# \---
-
-# 
-
-# <p align="center">
-
-# 
-
-# ⭐ If you found this project helpful, consider giving it a Star!
-
-# 
-
-# </p>
-
-# ````
-
-
-
+GitHub: https://github.com/AgastyaSama
+````
